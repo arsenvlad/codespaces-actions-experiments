@@ -17,3 +17,6 @@ jobs:
         env:
           MY_HOST: myhost
           MY_PORT: 1234
+      - name: Run script1.sh
+        run: ./.github/scripts/script1.sh
+        shell: bash
