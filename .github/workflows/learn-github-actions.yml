@@ -10,6 +10,5 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - uses: ./.github/actions/hello-world-action
       - name: Docker container action
         uses: docker://alpine:3.8
