@@ -13,7 +13,7 @@ jobs:
       - name: Docker container action
         uses: docker://alpine:3.8
       - name: Try environment variables
-        run: echo env
+        run: env
         env:
           MY_HOST: myhost
           MY_PORT: 1234
