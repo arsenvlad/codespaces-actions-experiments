@@ -18,4 +18,4 @@ jobs:
   Print-Action-Secrets:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ secrets.MY_ACTION_SECRET1 }}"
+      - run: echo "MY_ACTION_SECRET1 = ${{ secrets.MY_ACTION_SECRET1 }}"
