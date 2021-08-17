@@ -19,3 +19,16 @@ jobs:
           MY_PORT: 1234
       - name: Run script1.sh
         run: sudo bash ./.github/scripts/script1.sh
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-log.file
+          path: output.log
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file
+
