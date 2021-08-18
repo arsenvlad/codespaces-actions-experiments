@@ -32,7 +32,7 @@ jobs:
         with:
           name: output-log-file
       - name: Hello World Docker Action Step
-        uses: ./github/actions/hello-world-docker-action
+        uses: ./.github/actions/hello-world-docker-action
         id: hello
         with:
           who-to-greet: 'ArsenVlad'
