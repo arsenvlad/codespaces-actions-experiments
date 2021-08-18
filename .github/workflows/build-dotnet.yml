@@ -1,10 +1,12 @@
 name: Build .NET Core
 on: [push]
+
+env:
+  CONSOLE_APP_FOLDER: src/dotnet/console_app
+  
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CONSOLE_APP_FOLDER: src/dotnet/console_app
     strategy:
       matrix:
         dotnet-version: [ '5.0.x' ]
