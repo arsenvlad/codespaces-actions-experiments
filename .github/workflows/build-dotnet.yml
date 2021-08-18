@@ -3,6 +3,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CONSOLE_APP_FOLDER: src/dotnet/console_app
     strategy:
       matrix:
         dotnet-version: [ '5.0.x' ]
@@ -15,8 +17,8 @@ jobs:
       - name: Display dotnet version
         run: dotnet --version
       - name: Install dependencies
-        run: dotnet restore
+        run: dotnet ${{ env.CONSOLE_APP_FOLDER }} restore
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build ${{ env.CONSOLE_APP_FOLDER }} --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test ${{ env.CONSOLE_APP_FOLDER }} --no-restore --verbosity normal
