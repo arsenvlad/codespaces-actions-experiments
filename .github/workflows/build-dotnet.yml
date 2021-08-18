@@ -1,4 +1,4 @@
-name: Build .NET
+name: Build dotnet
 on: [push]
 jobs:
   build:
