@@ -31,4 +31,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: output-log-file
+      - name: Hello World Docker Action Step
+        uses: ./github/actions/hello-world-docker-action
+        id: hello
+        with:
+          who-to-greet: 'ArsenVlad'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
 
