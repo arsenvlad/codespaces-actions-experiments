@@ -4,7 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      dotnet-version: ['5.0.x']
+      matrix:
+        dotnet-version: ['5.0.x']
   steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core ${{ matrix.dotnet-version }}
