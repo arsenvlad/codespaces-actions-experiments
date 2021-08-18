@@ -1,11 +1,10 @@
-name: dotnet
+name: Build .NET
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       dotnet-version: ['5.0.x']
-  
   steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core ${{ matrix.dotnet-version }}
