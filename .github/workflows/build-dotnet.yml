@@ -17,7 +17,7 @@ jobs:
       - name: Display dotnet version
         run: dotnet --version
       - name: Install dependencies
-        run: dotnet ${{ env.CONSOLE_APP_FOLDER }} restore
+        run: dotnet restore ${{ env.CONSOLE_APP_FOLDER }}
       - name: Build
         run: dotnet build ${{ env.CONSOLE_APP_FOLDER }} --configuration Release --no-restore
       - name: Test
