@@ -18,7 +18,7 @@ jobs:
           MY_HOST: myhost
           MY_PORT: 1234
       - name: Run script1.sh
-        run: sudo bash ./.github/scripts/script1.sh
+        run: ./.github/scripts/script1.sh
       - shell: bash
         run: |
           expr 1 + 1 > output.log
